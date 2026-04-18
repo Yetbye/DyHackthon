@@ -1,22 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Quicksand", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
 }
 
 :root {
-  --bg-color: #E6F0FF;
-  --card-bg: #FFFFFF;
-  --accent-yellow: #FFCE00;
-  --text-main: #1D1D1F;
-  --text-secondary: #6E6E73;
-  --glass-bg: rgba(255, 255, 255, 0.4);
-  --shadow: 0 10px 40px rgba(0, 30, 80, 0.04);
-  --border-radius: 32px;
+  --bg-color: #FDF4FF;
+  --primary-gradient: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);
+  --secondary-gradient: linear-gradient(135deg, #A18CD1 0%, #FBC2EB 100%);
+  --accent-yellow: #FFDE59;
+  --text-main: #2D3436;
+  --text-secondary: #636E72;
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --border-radius: 28px;
+  --duo-shadow: 0 4px 0 rgba(0,0,0,0.1);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-morphism {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.duo-button {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.duo-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.floating-hearts {
+  position: absolute;
+  pointer-events: none;
+}
+
+@keyframes heart-float {
+  0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) scale(1.5) rotate(20deg); opacity: 0; }
+}
+
+.animate-heart {
+  animation: heart-float 1.5s ease-out forwards;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0;
 }

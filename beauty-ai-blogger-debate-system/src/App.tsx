@@ -19,7 +19,10 @@ import {
   ArrowRight,
   ShieldCheck,
   Zap,
-  Droplets
+  Droplets,
+  Gift,
+  Heart,
+  Droplet
 } from 'lucide-react';
 import { Blogger, Step, DebateRound, Recommendation } from './types';
 import { BLOGGERS, KNOWLEDGE_BASE } from './constants';
@@ -27,13 +30,13 @@ import { BLOGGERS, KNOWLEDGE_BASE } from './constants';
 // --- Components ---
 
 const GlassCard = ({ children, className }: { children: ReactNode; className?: string }) => (
-  <div className={`bg-white border border-white/60 shadow-[var(--shadow)] rounded-[var(--border-radius)] ${className}`}>
+  <div className={`glass-morphism rounded-[var(--border-radius)] shadow-[var(--duo-shadow)] border-2 border-white ${className}`}>
     {children}
   </div>
 );
 
 const SunflowerTag = ({ text }: { text: string }) => (
-  <span className="px-3 py-1 bg-[var(--accent-yellow)] text-black text-xs font-bold rounded-full">
+  <span className="px-3 py-1 bg-[var(--accent-yellow)] text-black text-[11px] font-black rounded-full uppercase tracking-tighter border-b-2 border-black/10">
     {text}
   </span>
 );
@@ -114,63 +117,79 @@ export default function App() {
       <div className="max-w-4xl mx-auto space-y-12">
         
         {/* Header */}
-        <header className="flex items-center justify-between">
+        <header className="flex items-center justify-between pb-4 border-b-4 border-black/5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[var(--text-main)] rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-[#FF9A9E] to-[#FAD0C4] rounded-2xl flex items-center justify-center shadow-md rotate-3">
               <Sparkles className="text-white w-6 h-6" />
             </div>
-            <h1 className="text-xl font-bold tracking-tight uppercase">DOUYIN <span className="font-light">BEAUTY AI</span></h1>
+            <h1 className="text-xl font-black tracking-tight text-[var(--text-main)]">BEAUTY <span className="text-[#FF8E9E]">AI</span></h1>
           </div>
-          <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-[var(--text-secondary)]">
-            <span>首页</span>
-            <span>博主库</span>
-            <div className="px-4 py-1.5 bg-[var(--accent-yellow)] text-black rounded-full text-xs font-bold">
-              PROTOTYPE v1.2
+          <div className="hidden md:flex items-center gap-6 text-[14px] font-bold">
+            <span className="text-[var(--text-secondary)] hover:text-black transition-colors cursor-pointer">发现</span>
+            <span className="text-[var(--text-secondary)] hover:text-black transition-colors cursor-pointer">实验室</span>
+            <div className="px-4 py-1.5 bg-[var(--accent-yellow)] text-black rounded-full text-[11px] font-black duo-button">
+              BETA LIVE
             </div>
           </div>
         </header>
 
-        <main>
+        <main className="relative">
           <AnimatePresence mode="wait">
             
             {/* Step 1: Input */}
             {step === 'input' && (
               <motion.div 
                 key="input"
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.05 }}
-                className="space-y-8"
+                exit={{ opacity: 0, scale: 1.1 }}
+                className="space-y-12 py-16"
               >
-                <div className="text-center space-y-4 pt-12">
-                  <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    你的美妆<span className="text-[var(--accent-yellow)]">辩论</span>智囊团
+                <div className="text-center space-y-6">
+                  <div className="inline-block px-4 py-1 bg-white rounded-full text-xs font-black text-[#FF8E9E] border-2 border-[#FFC1CC] shadow-sm mb-2">
+                    ✨ AI 选品新方式
+                  </div>
+                  <h2 className="text-5xl md:text-6xl font-black tracking-tight text-[var(--text-main)]">
+                    有问题？<br />陪你 <span className="text-[#58CC02] border-b-4 border-[#58CC02]/20">辩论</span> 到底
                   </h2>
-                  <p className="text-xl text-[var(--text-secondary)] font-medium">输入你的肤质问题，让专业博主为你“吵个高下”</p>
+                  <p className="text-lg text-[var(--text-secondary)] font-bold max-w-md mx-auto">
+                    不管是平替还是贵妇，不管是成分还是包装，<br />
+                    在这里，我们只说真话。
+                  </p>
                 </div>
 
-                <div className="relative group max-w-2xl mx-auto">
-                  <div className="absolute inset-0 bg-[var(--accent-yellow)]/10 blur-32px rounded-[var(--border-radius)] opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <GlassCard className="relative p-2 flex items-center gap-4 border border-white/60 group-focus-within:border-[var(--accent-yellow)] transition-colors">
-                    <Search className="ml-4 text-[var(--text-secondary)] w-6 h-6" />
-                    <input 
-                      type="text" 
-                      placeholder="例如：油痘肌怎么控油？最近换季总是长闭口..."
-                      className="flex-1 bg-transparent py-6 text-xl outline-none placeholder:text-gray-300"
-                      value={input}
-                      onChange={(e) => setInput(e.target.value)}
-                      onKeyDown={(e) => e.key === 'Enter' && startToKnowledge()}
-                    />
-                    <div className="p-4 bg-[var(--text-main)] rounded-[24px] cursor-pointer hover:opacity-90 transition-opacity" onClick={startToKnowledge}>
-                      <ArrowRight className="text-white" />
-                    </div>
-                  </GlassCard>
+                <div className="max-w-xl mx-auto space-y-8">
+                  <div className="relative group">
+                    <div className="absolute -inset-2 bg-gradient-to-r from-[#FF9A9E] to-[#FEB692] rounded-[36px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity" />
+                    <GlassCard className="relative p-3 flex items-center gap-4 bg-white/80 border-b-4 border-black/10">
+                      <Search className="ml-5 text-[#FFB6C1] w-6 h-6" />
+                      <input 
+                        type="text" 
+                        placeholder="今年夏天最火的防晒，真的好用吗？"
+                        className="flex-1 bg-transparent py-5 text-lg font-bold outline-none placeholder:text-gray-300"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && startToKnowledge()}
+                      />
+                      <button 
+                        className="w-14 h-14 bg-[#FF8E9E] rounded-full flex items-center justify-center duo-button active:translate-y-1" 
+                        onClick={startToKnowledge}
+                      >
+                        <ArrowRight className="text-white w-6 h-6" />
+                      </button>
+                    </GlassCard>
+                  </div>
                   
-                  {/* Floating Elements */}
-                  <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex items-center gap-4 text-sm font-medium">
-                    <button className="px-4 py-2 bg-white/50 backdrop-blur rounded-full border border-white hover:bg-white transition-colors">热门：祛痘印</button>
-                    <button className="px-4 py-2 bg-white/50 backdrop-blur rounded-full border border-white hover:bg-white transition-colors">大牌平替</button>
-                    <button className="px-4 py-2 bg-white/50 backdrop-blur rounded-full border border-white hover:bg-white transition-colors">敏肌维稳</button>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {['200元平替', '油痘肌必看', '敏肌救星', '早C晚A'].map(tag => (
+                      <button 
+                        key={tag}
+                        onClick={() => setInput(tag)}
+                        className="px-5 py-2.5 bg-white rounded-2xl text-[14px] font-black text-[var(--text-secondary)] border-b-4 border-black/5 hover:border-black/10 hover:bg-gray-50 transition-all active:translate-y-0.5"
+                      >
+                        {tag}
+                      </button>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -180,51 +199,62 @@ export default function App() {
             {step === 'knowledge' && (
               <motion.div 
                 key="knowledge"
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                className="grid grid-cols-1 md:grid-cols-12 gap-6"
               >
-                <div className="md:col-span-2 space-y-6">
-                  <GlassCard className="p-8 space-y-4 min-h-[300px] flex flex-col justify-center">
-                    <div className="flex items-center gap-2 text-[var(--text-secondary)] mb-2">
-                      <span className="font-bold uppercase tracking-widest text-[10px]">原理科普</span>
+                <div className="md:col-span-8 flex flex-col gap-6">
+                  <GlassCard className="p-10 space-y-6 flex-1 flex flex-col justify-center">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full w-fit">
+                      <Droplets className="w-3.5 h-3.5" />
+                      <span className="font-bold uppercase tracking-wider text-[10px]">肤质底层逻辑</span>
                     </div>
-                    <h3 className="text-3xl font-bold">{KNOWLEDGE_BASE.acne.title}</h3>
-                    <p className="text-lg text-[var(--text-secondary)] leading-relaxed font-medium">
+                    <h3 className="text-4xl font-bold tracking-tight">{KNOWLEDGE_BASE.acne.title}</h3>
+                    <p className="text-[19px] text-[var(--text-secondary)] leading-relaxed font-medium">
                       {KNOWLEDGE_BASE.acne.content}
                     </p>
                   </GlassCard>
-                  <GlassCard className="p-8 bg-white border-[var(--accent-yellow)]/30 flex items-start gap-4">
-                    <div className="p-3 bg-[var(--accent-yellow)] rounded-2xl">
-                      <Zap className="text-black w-6 h-6" />
+                  <GlassCard className="p-8 bg-[var(--accent-yellow)] flex items-start gap-5 border-none shadow-yellow-200">
+                    <div className="p-4 bg-white/20 backdrop-blur rounded-2xl">
+                      <Zap className="text-black w-7 h-7" />
                     </div>
-                    <p className="text-lg font-bold italic text-[var(--text-main)]">
-                      {KNOWLEDGE_BASE.acne.misconception}
-                    </p>
+                    <div className="space-y-1 pt-1">
+                      <div className="text-[11px] font-black uppercase tracking-widest text-black/40">误区提醒</div>
+                      <p className="text-lg font-bold text-black/90 leading-tight">
+                        {KNOWLEDGE_BASE.acne.misconception}
+                      </p>
+                    </div>
                   </GlassCard>
                 </div>
                 
-                <div className="space-y-6">
-                  <h4 className="text-xl font-bold px-4">二次聚焦筛选</h4>
-                  <div className="space-y-4">
-                    <button onClick={() => handleFocus('A')} className="w-full text-left">
-                      <GlassCard className="p-6 hover:bg-blue-50 transition-all hover:scale-[1.02] border-2 border-transparent hover:border-blue-200">
-                        <div className="font-bold text-blue-600 mb-1">A. 预算优先</div>
-                        <div className="text-xs text-gray-500 font-medium">200元内，高性价比选品方案</div>
-                      </GlassCard>
-                    </button>
-                    <button onClick={() => handleFocus('B')} className="w-full text-left">
-                      <GlassCard className="p-6 hover:bg-blue-50 transition-all hover:scale-[1.02] border-2 border-transparent hover:border-blue-200">
-                        <div className="font-bold text-blue-600 mb-1">B. 效果优先</div>
-                        <div className="text-xs text-gray-500 font-medium">成分硬核，追求极致见效速度</div>
-                      </GlassCard>
-                    </button>
-                    <button onClick={() => handleFocus('C')} className="w-full text-left">
-                      <GlassCard className="p-6 hover:bg-blue-50 transition-all hover:scale-[1.02] border-2 border-transparent hover:border-blue-200">
-                        <div className="font-bold text-blue-600 mb-1">C. 温和修护</div>
-                        <div className="text-xs text-gray-500 font-medium">不刺激，针对爆痘期的敏感状态</div>
-                      </GlassCard>
-                    </button>
+                <div className="md:col-span-4 flex flex-col gap-6">
+                  <div className="px-1 py-1">
+                    <h4 className="text-sm font-black uppercase tracking-widest text-[var(--text-secondary)] flex items-center gap-2">
+                       <ArrowRight className="w-3.5 h-3.5" /> 二次聚焦筛选
+                    </h4>
+                  </div>
+                  <div className="grid grid-cols-1 gap-4">
+                    {[
+                      { id: 'A', title: '预算优先', sub: '200元内，性价比最大化', color: 'bg-emerald-500' },
+                      { id: 'B', title: '效果优先', sub: '成分硬核，快速见效', color: 'bg-orange-500' },
+                      { id: 'C', title: '温和修护', sub: '屏障修复，温和无刺激', color: 'bg-indigo-500' }
+                    ].map((opt) => (
+                      <button 
+                        key={opt.id} 
+                        onClick={() => handleFocus(opt.id as any)} 
+                        className="group text-left active:scale-[0.98] transition-transform"
+                      >
+                        <GlassCard className="p-7 hover:border-[var(--accent-yellow)] transition-all relative overflow-hidden">
+                          <div className={`absolute left-0 top-0 bottom-0 w-1 ${opt.color} opacity-20`} />
+                          <div className="flex justify-between items-start mb-1">
+                            <span className="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-black transition-colors">Option {opt.id}</span>
+                            <div className={`w-2 h-2 rounded-full ${opt.color}`} />
+                          </div>
+                          <div className="font-bold text-xl mb-1">{opt.title}</div>
+                          <div className="text-[13px] text-[var(--text-secondary)] font-medium">{opt.sub}</div>
+                        </GlassCard>
+                      </button>
+                    ))}
                   </div>
                 </div>
               </motion.div>
@@ -234,17 +264,18 @@ export default function App() {
             {step === 'matching' && (
               <motion.div 
                 key="matching"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="space-y-8"
+                className="space-y-10"
               >
-                <div className="flex items-end justify-between px-4">
+                <div className="flex items-center justify-between px-2">
                   <div className="space-y-1">
-                    <h2 className="text-3xl font-bold">为您匹配了 5 位博主</h2>
-                    <p className="text-gray-500 font-medium">请从中挑选 3 位进入辩论直播间</p>
+                    <h2 className="text-3xl font-bold tracking-tight">为您精准匹配博主</h2>
+                    <p className="text-[15px] text-[var(--text-secondary)] font-medium">请自主挑选 3 位进入后续辩论环节</p>
                   </div>
-                  <div className="text-right">
-                    <span className="text-sm font-bold text-blue-600">已选 {selectedBloggerIds.length}/3</span>
+                  <div className="h-10 px-4 bg-white/60 border border-white/80 rounded-full flex items-center gap-2 shadow-sm">
+                    <Users className="w-4 h-4 text-black/40" />
+                    <span className="text-[13px] font-black uppercase tracking-tighter">已选 {selectedBloggerIds.length} / 3</span>
                   </div>
                 </div>
 
@@ -253,27 +284,25 @@ export default function App() {
                     <div 
                       key={blogger.id}
                       onClick={() => toggleBloggerSelection(blogger.id)}
-                      className={`cursor-pointer transition-all duration-300 relative rounded-[32px] overflow-hidden group
-                        ${selectedBloggerIds.includes(blogger.id) ? 'ring-4 ring-blue-500 ring-offset-4 ring-offset-[#E6F0FF] scale-[1.05] z-10' : 'opacity-80 hover:opacity-100 hover:scale-[1.02]'}
-                      `}
+                      className="cursor-pointer transition-all duration-300 relative group active:scale-[0.97]"
                     >
-                      <GlassCard className="h-full flex flex-col items-center text-center p-6 space-y-4">
-                        <div className="relative">
-                          <img src={blogger.avatar} className="w-16 h-16 rounded-2xl object-cover shadow-md" alt={blogger.name} />
-                          {selectedBloggerIds.includes(blogger.id) && (
-                            <div className="absolute -top-2 -right-2 bg-blue-500 text-white p-1 rounded-full border-2 border-white">
-                              <CheckCircle2 className="w-4 h-4" />
-                            </div>
-                          )}
-                        </div>
-                        <div className="space-y-1">
+                      <GlassCard className={`h-full flex flex-col items-center text-center p-7 relative transition-all duration-500 overflow-hidden
+                        ${selectedBloggerIds.includes(blogger.id) ? 'border-[var(--accent-yellow)] ring-4 ring-[var(--accent-yellow)]/10 scale-[1.02]' : 'hover:border-black/5'}
+                      `}>
+                        {selectedBloggerIds.includes(blogger.id) && (
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--accent-yellow)] rotate-45 translate-x-14 -translate-y-14 flex items-end justify-center pb-2 pr-10">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-black -rotate-45" />
+                          </div>
+                        )}
+                        <img src={blogger.avatar} className="w-20 h-20 rounded-[28px] object-cover shadow-lg mb-5 border-4 border-white" alt={blogger.name} />
+                        <div className="space-y-1 self-stretch">
                           <h3 className="font-bold text-lg">{blogger.name}</h3>
-                          <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">{blogger.description}</p>
+                          <div className="text-[10px] font-black text-[var(--accent-yellow)] border border-[var(--accent-yellow)]/20 px-1.5 py-0.5 rounded-md inline-block uppercase tracking-widest">{blogger.type}</div>
                         </div>
-                        <p className="text-[11px] text-gray-500 font-medium leading-tight">“{blogger.quote}”</p>
-                        <div className="pt-2 flex flex-wrap justify-center gap-1">
+                        <p className="text-[11.5px] text-[var(--text-secondary)] font-medium leading-[1.3] my-4 px-2">“{blogger.quote}”</p>
+                        <div className="flex flex-wrap justify-center gap-1.5 pt-2">
                           {blogger.tags.slice(0, 2).map(t => (
-                            <span key={t} className="px-2 py-0.5 bg-gray-100 text-[9px] font-bold rounded-lg">{t}</span>
+                            <span key={t} className="px-2 py-0.5 bg-black/5 text-[9px] font-black tracking-widest uppercase rounded-lg text-black/60">{t}</span>
                           ))}
                         </div>
                       </GlassCard>
@@ -281,177 +310,182 @@ export default function App() {
                   ))}
                 </div>
 
-                <div className="flex justify-center pt-8">
+                <div className="flex justify-center pt-6">
                   <button 
                     disabled={selectedBloggerIds.length !== 3}
                     onClick={startDebate}
-                    className={`px-12 py-5 rounded-[24px] font-bold text-xl flex items-center gap-2 transition-all shadow-xl
-                      ${selectedBloggerIds.length === 3 ? 'bg-black text-white hover:scale-110 active:scale-95' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}
+                    className={`group px-14 py-6 rounded-[32px] font-black text-xl flex items-center gap-3 transition-all relative overflow-hidden active:scale-95
+                      ${selectedBloggerIds.length === 3 ? 'bg-[var(--text-main)] text-white shadow-2xl hover:shadow-[var(--accent-yellow)]/30' : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'}
                     `}
                   >
-                    <MessageSquare /> 开始辩论
+                    开始辩论直播
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-[var(--accent-yellow)] group-hover:text-black transition-colors">
+                      <ChevronRight className="w-5 h-5" />
+                    </div>
                   </button>
                 </div>
               </motion.div>
             )}
 
-            {/* Step 4: Debate */}
+            {/* Step 4: Debate (Livestream Style) */}
             {step === 'debate' && (
               <motion.div 
                 key="debate"
-                className="space-y-6"
+                className="relative h-[700px] rounded-[40px] overflow-hidden shadow-2xl border-4 border-white"
               >
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex -space-x-4">
-                    {selectedBloggers.map(b => (
-                      <img key={b.id} src={b.avatar} className="w-10 h-10 rounded-full border-2 border-white shadow-sm" alt="" />
-                    ))}
-                    <div className="ml-8 font-bold flex items-center gap-2">
-                      <span className="text-red-500 animate-pulse">●</span>
-                      美妆辩论进行中...
+                {/* Livestream Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#2D3436] to-[#000000]" />
+                
+                {/* Hearts Animation Container */}
+                <div className="absolute right-8 bottom-32 z-50">
+                   <div className="relative">
+                      {/* Simulating floating hearts */}
+                      <motion.div animate={{ y: -200, opacity: 0 }} transition={{ repeat: Infinity, duration: 2 }} className="text-red-500 absolute bottom-0">❤️</motion.div>
+                      <motion.div animate={{ y: -180, x: -20, opacity: 0 }} transition={{ repeat: Infinity, duration: 2, delay: 0.5 }} className="text-blue-400 absolute bottom-0">💙</motion.div>
+                      <motion.div animate={{ y: -220, x: 20, opacity: 0 }} transition={{ repeat: Infinity, duration: 2, delay: 1 }} className="text-yellow-400 absolute bottom-0">💛</motion.div>
+                   </div>
+                </div>
+
+                {/* Top Overlay: Blogger Info */}
+                <div className="absolute top-0 left-0 right-0 p-6 flex items-start justify-between z-10 bg-gradient-to-b from-black/60 to-transparent">
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md p-1.5 pr-4 rounded-full border border-white/20">
+                      <img src={selectedBloggers[0]?.avatar} className="w-10 h-10 rounded-full border-2 border-[var(--accent-yellow)]" alt="" />
+                      <div>
+                        <div className="text-white text-xs font-black">{selectedBloggers[0]?.name}</div>
+                        <div className="text-white/60 text-[10px] font-bold flex items-center gap-1">
+                          <Users className="w-2.5 h-2.5" /> 12.8w 本场关注
+                        </div>
+                      </div>
+                      <button className="ml-2 px-3 py-1 bg-[#FF8E9E] text-white text-[10px] font-black rounded-full duo-button">关注</button>
+                    </div>
+                    <div className="flex gap-2">
+                       {selectedBloggers.slice(1).map(b => (
+                         <div key={b.id} className="w-8 h-8 rounded-full border-2 border-white/40 overflow-hidden">
+                           <img src={b.avatar} className="w-full h-full object-cover" alt="" />
+                         </div>
+                       ))}
                     </div>
                   </div>
-                  <div className="bg-white/50 px-4 py-2 rounded-full text-sm font-bold border border-white">
-                    轮次 {Math.ceil((currentRound + 1) / 3)} / 5
+                  <div className="flex flex-col items-end gap-2">
+                    <div className="bg-[#FF0050] text-white px-3 py-1 rounded-md text-[10px] font-black tracking-widest animate-pulse">LIVE 辩论中</div>
+                    <div className="bg-black/20 backdrop-blur-md px-3 py-1 rounded-full text-white/80 text-[10px] font-bold"> ID: BeautyAI-999</div>
                   </div>
                 </div>
 
-                <div className="space-y-4 max-h-[600px] overflow-y-auto pr-4 custom-scrollbar">
-                  {debateRounds.slice(0, currentRound + 1).map((round, idx) => {
-                    const blogger = selectedBloggers.find(b => b.name === round.speaker);
-                    const isLeft = idx % 2 === 0;
-                    return (
-                      <motion.div 
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        key={idx}
-                        className={`flex gap-4 ${isLeft ? '' : 'flex-row-reverse'}`}
-                      >
-                        <div className="flex-shrink-0">
-                          <img src={blogger?.avatar} className="w-12 h-12 rounded-2xl object-cover border-2 border-[var(--accent-yellow)]" alt="" />
-                        </div>
-                        <div className={`space-y-1 max-w-[85%]`}>
-                          <div className={`text-[10px] uppercase tracking-wider font-bold text-[var(--text-secondary)] px-1 ${isLeft ? '' : 'text-right'}`}>{round.speaker}</div>
-                          <div className={`p-5 rounded-[20px] text-[15px] leading-relaxed font-medium ${isLeft ? 'bg-[#F2F2F7] rounded-tl-none' : 'bg-[#E6F0FF] rounded-tr-none border border-blue-500/10'}`}>
-                            {round.content}
+                {/* Main Content: The Bubble Feed */}
+                <div className="absolute inset-0 pt-32 pb-40 px-6 overflow-y-auto custom-scrollbar flex flex-col justify-end">
+                  <div className="space-y-4">
+                    {debateRounds.slice(0, currentRound + 1).map((round, idx) => {
+                      const blogger = selectedBloggers.find(b => b.name === round.speaker);
+                      return (
+                        <motion.div 
+                          initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                          animate={{ opacity: 1, x: 0, scale: 1 }}
+                          key={idx}
+                          className="flex items-start gap-3 max-w-[90%]"
+                        >
+                          <img src={blogger?.avatar} className="w-8 h-8 rounded-full border-2 border-white flex-shrink-0" alt="" />
+                          <div className="bg-black/30 backdrop-blur-lg border border-white/10 p-3 py-2 rounded-2xl rounded-tl-none">
+                            <span className="text-[var(--accent-yellow)] text-[11px] font-black mr-2 uppercase">{round.speaker}:</span>
+                            <span className="text-white text-[14px] font-bold leading-relaxed">{round.content}</span>
                           </div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                  <div id="debate-end" />
+                        </motion.div>
+                      );
+                    })}
+                    <div id="debate-end" />
+                  </div>
+                </div>
+
+                {/* Bottom Overlay: Controls */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 pt-12 flex items-center gap-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <div className="flex-1 h-12 bg-white/20 backdrop-blur-md rounded-full border border-white/20 flex items-center px-6 text-white/60 text-sm font-bold">
+                    说点什么，为喜欢的博主打 Call...
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#FFDE59] to-[#FF914D] rounded-full flex items-center justify-center shadow-lg cursor-pointer animate-bounce">
+                      <Gift className="text-white w-6 h-6" />
+                    </div>
+                    <div className="w-12 h-12 bg-[#FF0050] rounded-full flex items-center justify-center shadow-lg cursor-pointer">
+                      <Heart className="text-white w-6 h-6 fill-current" />
+                    </div>
+                  </div>
                 </div>
 
                 {!isDebating && (
                   <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="flex justify-center pt-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col items-center justify-center text-center p-8"
                   >
+                    <div className="w-24 h-24 bg-[var(--accent-yellow)] rounded-full flex items-center justify-center shadow-2xl mb-6 duo-button">
+                      <CheckCircle2 className="w-12 h-12 text-black" />
+                    </div>
+                    <h3 className="text-3xl font-black text-white mb-4">辩论直播圆满结束！</h3>
+                    <p className="text-white/60 font-bold mb-10 max-w-xs">三位博主已经为您在海量观点中提炼出了最硬核的推荐结果</p>
                     <button 
                       onClick={goToResult}
-                      className="px-12 py-5 bg-[#FFD700] text-black rounded-[24px] font-bold text-xl flex items-center gap-2 hover:scale-110 active:scale-95 transition-all shadow-xl"
+                      className="px-10 py-5 bg-[#FF8E9E] text-white rounded-full font-black text-xl duo-button active:scale-95"
                     >
-                      查看最终推荐方案 <ChevronRight />
+                      点击领取我的专属推荐
                     </button>
                   </motion.div>
                 )}
               </motion.div>
             )}
 
-            {/* Step 5: Result */}
+            {/* Step 5: Result (Celebration Style) */}
             {step === 'result' && (
               <motion.div 
                 key="result"
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="space-y-8"
+                className="space-y-10"
               >
-                <div className="text-center space-y-2">
-                  <h2 className="text-4xl font-bold flex items-center justify-center gap-3">
-                    为您最终决策
-                  </h2>
-                  <p className="text-[var(--text-secondary)] font-medium italic">目前 2/3 博主达成共识：该产品适配您的肤质评价</p>
+                <div className="text-center space-y-4">
+                  <div className="w-20 h-20 bg-[#58CC02] rounded-3xl mx-auto flex items-center justify-center shadow-xl duo-button mb-4 border-b-8 border-black/10">
+                    <CheckCircle2 className="text-white w-10 h-10" />
+                  </div>
+                  <h2 className="text-4xl font-black tracking-tight">为您挑到宝啦！</h2>
+                  <p className="text-lg text-[var(--text-secondary)] font-bold">综合博主实测与辩论共识，该选品最值得入手</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                  {/* Primary Product */}
-                  <GlassCard className="md:col-span-8 p-10 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center border-4 border-white">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFD700] rotate-45 translate-x-16 -translate-y-16 flex items-end justify-center pb-4 pr-12">
-                      <span className="text-black font-black text-xs -rotate-45">首选方案</span>
-                    </div>
-                    
-                    <div className="w-48 h-48 bg-gray-100 rounded-[32px] flex items-center justify-center relative shadow-inner">
-                      <ShoppingBag className="w-16 h-16 text-gray-300" />
-                      <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-bold opacity-20">Sample Product</div>
-                    </div>
-
-                    <div className="flex-1 space-y-6">
-                      <div className="space-y-1">
-                        <div className="flex items-center gap-2">
-                          <SunflowerTag text="博乐达" />
-                          <SunflowerTag text="官方授权" />
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                  <GlassCard className="md:col-span-12 p-10 bg-gradient-to-br from-white to-[#FFF5F7] border-none">
+                     <div className="flex flex-col md:flex-row gap-12 items-center">
+                        <div className="w-72 h-72 bg-gradient-to-tr from-[#FF9A9E] to-[#FAD0C4] rounded-[48px] flex items-center justify-center shadow-inner relative group border-4 border-white">
+                           <ShoppingBag className="w-24 h-24 text-white/40 transition-transform group-hover:scale-110" />
+                           <img src="https://picsum.photos/seed/beauty/500/500" className="absolute inset-0 w-full h-full object-cover rounded-[48px] mix-blend-overlay opacity-50" alt="" />
                         </div>
-                        <h3 className="text-3xl font-black">超分子水杨酸面膜</h3>
-                        <div className="text-4xl font-black text-blue-600">¥128.<span className="text-lg">00</span></div>
-                      </div>
+                        <div className="flex-1 space-y-8">
+                           <div className="space-y-2">
+                             <div className="flex gap-2">
+                                <SunflowerTag text="博乐达" />
+                                <SunflowerTag text="官方授权" />
+                             </div>
+                             <h3 className="text-5xl font-black tracking-tighter">超分子水杨酸面膜</h3>
+                             <p className="text-2xl font-black text-[#FF8E9E]">¥128 <span className="text-sm font-bold opacity-60">官方直播价</span></p>
+                           </div>
 
-                      <div className="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
-                        <div className="flex items-center gap-2 text-blue-600 font-black text-xs mb-2 italic">
-                          <CheckCircle2 className="w-4 h-4" /> 推荐理由
+                           <div className="p-6 bg-[#58CC02]/10 rounded-3xl border-2 border-[#58CC02]/20">
+                             <div className="text-[#58CC02] text-xs font-black uppercase tracking-widest mb-3 italic">辩论达成共识</div>
+                             <p className="text-[15px] font-bold leading-relaxed text-[#2D3436]/80">
+                               超分子缓释技术完美解决了“控油效率”与“皮肤受损”之间的矛盾。即使是换季期的敏皮，也能在博主们的验证下放心刷酸。
+                             </p>
+                           </div>
+
+                           <button className="w-full py-6 bg-[#FF8E9E] text-white rounded-[32px] font-black text-xl duo-button active:translate-y-1">
+                             立即领取福利并购买
+                           </button>
                         </div>
-                        <p className="text-sm font-medium leading-relaxed text-blue-900">
-                          三位博主的一致共识点在于：该产品采用超分子缓释技术，既保证了控油祛痘的硬核程度，又显著降低了刺激感。特别契合您“预算200内”且“偶尔敏感”的诉求，长期维稳效果极佳。
-                        </p>
-                      </div>
-
-                      <button className="w-full py-5 bg-black text-white rounded-[24px] font-black tracking-widest hover:bg-gray-800 transition-all flex items-center justify-center gap-2">
-                        立即前往抖音电商购买 <ChevronRight />
-                      </button>
-                    </div>
+                     </div>
                   </GlassCard>
-
-                  {/* Secondary & Tips */}
-                  <div className="md:col-span-4 space-y-6">
-                    <GlassCard className="p-8 space-y-4 border-2 border-gray-100/50">
-                      <h4 className="font-black flex items-center gap-2">
-                        <Users className="w-5 h-5" /> 备选方案
-                      </h4>
-                      <div className="p-4 bg-gray-50 rounded-2x border border-dashed border-gray-200">
-                        <div className="font-bold text-sm">理肤泉 K乳 (K+)</div>
-                        <p className="text-[11px] text-gray-400 font-medium">更侧重针对黑头闭口，价格略高</p>
-                      </div>
-                    </GlassCard>
-
-                    <GlassCard className="p-8 space-y-4 bg-[#FFC107]/5 border-[#FFC107]/20">
-                      <h4 className="font-black flex items-center gap-2">
-                        <ShieldCheck className="w-5 h-5 text-yellow-600" /> 护肤步骤
-                      </h4>
-                      <div className="space-y-4 text-sm font-medium">
-                        <div className="flex gap-3">
-                          <div className="flex flex-col items-center">
-                            <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full" />
-                            <div className="w-0.5 flex-1 bg-yellow-200" />
-                          </div>
-                          <div>AM: 氨基酸洁面 → 补水喷雾 → 玻尿酸保湿液</div>
-                        </div>
-                        <div className="flex gap-3">
-                          <div className="flex flex-col items-center">
-                            <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full" />
-                            <div className="w-0.5 flex-1 bg-yellow-200" />
-                          </div>
-                          <div>PM: 卸妆 → 洁面 → <span className="underline font-black text-black">超分子水杨酸</span> → 舒缓面霜</div>
-                        </div>
-                      </div>
-                    </GlassCard>
-                    
-                    <button 
-                      onClick={() => setStep('input')}
-                      className="w-full py-4 text-sm font-bold text-gray-400 hover:text-black transition-colors"
-                    >
-                      重新开始咨询?
-                    </button>
-                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                   <button onClick={() => setStep('input')} className="text-sm font-black text-gray-400 hover:text-black transition-colors underline underline-offset-8 decoration-2">
+                     重新开启咨询模式
+                   </button>
                 </div>
               </motion.div>
             )}
@@ -462,7 +496,7 @@ export default function App() {
         <footer className="pt-12 pb-8 border-t border-gray-100 text-xs font-bold text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-4">
             <span className="uppercase tracking-widest">© 2026 抖音美妆 AI 实验室</span>
-            <span>博主数据：Demo 演示版</span>
+            <span>博长数据：Demo 演示版</span>
           </div>
           <div className="flex items-center gap-6">
             <span className="hover:text-black cursor-pointer">服务协议</span>
@@ -473,25 +507,29 @@ export default function App() {
 
       </div>
 
-      {/* AI Voice Input Component (Glassmorphism inspired) */}
+      {/* Floating Glassmorphism AI Voice Input (Cute Style) */}
       {step === 'input' && (
         <motion.div 
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
-          className="fixed bottom-12 left-1/2 -translate-x-1/2 w-full max-w-lg px-6"
+          initial={{ y: 100, x: '-50%' }}
+          animate={{ y: 0, x: '-50%' }}
+          className="fixed bottom-12 left-1/2 w-full max-w-lg px-6 z-50"
         >
-          <div className="relative group p-1.5 bg-[var(--glass-bg)] backdrop-blur-3xl rounded-full border border-white/50 shadow-2xl flex items-center gap-6 cursor-pointer">
-            <div className="ml-6 flex items-center gap-1.5 h-12">
-              <div className="w-0.5 h-4 bg-[var(--text-main)] rounded-full animate-pulse" />
-              <div className="w-0.5 h-8 bg-[var(--text-main)] rounded-full animate-pulse delay-75" />
-              <div className="w-0.5 h-6 bg-[var(--text-main)] rounded-full animate-pulse delay-150" />
-              <div className="w-0.5 h-10 bg-[var(--text-main)] rounded-full animate-pulse delay-300" />
-              <div className="w-0.5 h-5 bg-[var(--text-main)] rounded-full animate-pulse delay-500" />
+          <div className="relative group p-2.5 bg-white/80 backdrop-blur-3xl rounded-full border-b-4 border-black/10 shadow-2xl flex items-center gap-6 cursor-pointer hover:bg-white transition-all active:scale-[0.98]">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#FF9A9E] to-[#FECFEF] rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity" />
+            <div className="ml-6 flex items-end gap-1.5 h-10 py-1">
+              {[0.4, 0.8, 0.6, 1.0, 0.5, 0.7].map((h, i) => (
+                <motion.div 
+                  key={i}
+                  animate={{ height: ['40%', '100%', '40%'] }}
+                  transition={{ repeat: Infinity, duration: 1, delay: i * 0.1 }}
+                  className="w-1.5 bg-[#FF8E9E] rounded-full" 
+                />
+              ))}
             </div>
-            <span className="flex-1 text-sm font-semibold text-[var(--text-secondary)] italic">
-              "我想了解一下那个89元的品牌..."
+            <span className="flex-1 text-[13px] font-black text-[var(--text-secondary)] uppercase tracking-[0.2em] opacity-60">
+              Listening Now...
             </span>
-            <div className="w-12 h-12 bg-[var(--text-main)] rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform">
+            <div className="w-14 h-14 bg-[#FF8E9E] rounded-full flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duo-button">
               <Mic className="text-white w-6 h-6" />
             </div>
           </div>
@@ -499,16 +537,6 @@ export default function App() {
       )}
 
       <style>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #D1D5DB;
-          border-radius: 10px;
-        }
         @keyframes blur {
           from { filter: blur(0); }
           to { filter: blur(32px); }
