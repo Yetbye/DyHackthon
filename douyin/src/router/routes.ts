@@ -233,6 +233,19 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/home/search',
     component: () => import('@/pages/home/SearchPage.vue')
+  },
+  
+  // Agent聊天页面 - 多Agent辩论系统
+  {
+    path: '/agent-chat',
+    name: 'AgentChat',
+    component: () => import('@/components/agent/AgentDebateChat.vue')
+  },
+  // Agent配置页面
+  {
+    path: '/agent-config',
+    name: 'AgentConfig',
+    component: () => import('@/components/agent/AgentConfig.vue')
   }
 ]
 

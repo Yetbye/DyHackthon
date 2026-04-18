@@ -1,0 +1,181 @@
+[
+  {
+    "id": "foundation_0100",
+    "name": "0-100 元价位粉底",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop"
+    ],
+    "price": 200,
+    "real_price": 100,
+    "isLowPrice": false,
+    "discount": "博主推荐",
+    "sold": 1000,
+    "brand": "0-100",
+    "category": "粉底",
+    "tags": [
+      "natural",
+      "light"
+    ],
+    "skinType": [
+      "干皮"
+    ],
+    "description": "适合场景：daily, office | 妆效：natural | 遮瑕：light",
+    "blogger_recommended": true,
+    "fit_scenes": [
+      "daily",
+      "office"
+    ],
+    "longwear_level": "medium",
+    "risk_tags": []
+  },
+  {
+    "id": "foundation_100200",
+    "name": "100-200 元价位粉底",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop"
+    ],
+    "price": 200,
+    "real_price": 100,
+    "isLowPrice": false,
+    "discount": "博主推荐",
+    "sold": 1100,
+    "brand": "100-200",
+    "category": "粉底",
+    "tags": [
+      "natural",
+      "light"
+    ],
+    "skinType": [
+      "干皮"
+    ],
+    "description": "适合场景：daily, office | 妆效：natural | 遮瑕：light",
+    "blogger_recommended": true,
+    "fit_scenes": [
+      "daily",
+      "office"
+    ],
+    "longwear_level": "medium",
+    "risk_tags": []
+  },
+  {
+    "id": "foundation_200300",
+    "name": "200-300 元价位粉底",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop"
+    ],
+    "price": 200,
+    "real_price": 100,
+    "isLowPrice": false,
+    "discount": "博主推荐",
+    "sold": 1200,
+    "brand": "200-300",
+    "category": "粉底",
+    "tags": [
+      "natural",
+      "light"
+    ],
+    "skinType": [
+      "干皮"
+    ],
+    "description": "适合场景：daily, office | 妆效：natural | 遮瑕：light",
+    "blogger_recommended": true,
+    "fit_scenes": [
+      "daily",
+      "office"
+    ],
+    "longwear_level": "medium",
+    "risk_tags": []
+  },
+  {
+    "id": "foundation_300400",
+    "name": "300-400 元价位粉底",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop"
+    ],
+    "price": 200,
+    "real_price": 100,
+    "isLowPrice": false,
+    "discount": "博主推荐",
+    "sold": 1300,
+    "brand": "300-400",
+    "category": "粉底",
+    "tags": [
+      "natural",
+      "light"
+    ],
+    "skinType": [
+      "干皮"
+    ],
+    "description": "适合场景：daily, office | 妆效：natural | 遮瑕：light",
+    "blogger_recommended": true,
+    "fit_scenes": [
+      "daily",
+      "office"
+    ],
+    "longwear_level": "medium",
+    "risk_tags": []
+  },
+  {
+    "id": "foundation_400500",
+    "name": "400-500 元价位粉底",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop"
+    ],
+    "price": 200,
+    "real_price": 100,
+    "isLowPrice": false,
+    "discount": "博主推荐",
+    "sold": 1400,
+    "brand": "400-500",
+    "category": "粉底",
+    "tags": [
+      "natural",
+      "light"
+    ],
+    "skinType": [
+      "干皮"
+    ],
+    "description": "适合场景：daily, office | 妆效：natural | 遮瑕：light",
+    "blogger_recommended": true,
+    "fit_scenes": [
+      "daily",
+      "office"
+    ],
+    "longwear_level": "medium",
+    "risk_tags": []
+  },
+  {
+    "id": "lipstick_",
+    "name": "颜色",
+    "cover": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop"
+    ],
+    "price": 200,
+    "real_price": 100,
+    "isLowPrice": false,
+    "discount": "博主推荐",
+    "sold": 1500,
+    "brand": "颜色",
+    "category": "口红",
+    "tags": [
+      "matte"
+    ],
+    "skinType": [
+      "所有肤质"
+    ],
+    "description": "适合场景：daily, office | 妆效：matte | 遮瑕：中等",
+    "blogger_recommended": true,
+    "fit_scenes": [
+      "daily",
+      "office"
+    ],
+    "longwear_level": "medium",
+    "risk_tags": []
+  }
+]

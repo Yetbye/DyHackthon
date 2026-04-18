@@ -1,0 +1,382 @@
+[
+  {
+    "id": "beauty-001",
+    "name": "YSL圣罗兰小金条口红 #21复古蓝调红",
+    "cover": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=400&h=400&fit=crop"
+    ],
+    "price": 390,
+    "real_price": 350,
+    "isLowPrice": true,
+    "discount": "满300减40",
+    "sold": 12580,
+    "brand": "YSL圣罗兰",
+    "category": "口红",
+    "tags": ["显白", "哑光", "持久"],
+    "skinType": ["所有肤质"],
+    "description": "经典小金条，#21复古蓝调红，显白不挑皮，哑光质地高级感十足"
+  },
+  {
+    "id": "beauty-002",
+    "name": "Dior迪奥烈艳蓝金唇膏 #999传奇红唇",
+    "cover": "https://images.unsplash.com/photo-1591360236480-94955f5209d5?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1591360236480-94955f5209d5?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1571646034642-9d9e56f65f18?w=400&h=400&fit=crop"
+    ],
+    "price": 380,
+    "real_price": 340,
+    "isLowPrice": true,
+    "discount": "会员9折",
+    "sold": 25600,
+    "brand": "Dior迪奥",
+    "category": "口红",
+    "tags": ["经典", "滋润", "正红色"],
+    "skinType": ["所有肤质"],
+    "description": "传奇#999，每个女人都应该拥有的正红色，滋润显色不拔干"
+  },
+  {
+    "id": "beauty-003",
+    "name": "Estee Lauder雅诗兰黛小棕瓶精华液 50ml",
+    "cover": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=400&fit=crop"
+    ],
+    "price": 935,
+    "real_price": 799,
+    "isLowPrice": true,
+    "discount": "限时特惠",
+    "sold": 8900,
+    "brand": "Estee Lauder雅诗兰黛",
+    "category": "精华",
+    "tags": ["修护", "抗老", "维稳"],
+    "skinType": ["所有肤质", "敏感肌"],
+    "description": "第七代小棕瓶，夜间修护，肌肤弹润透亮，抗老首选"
+  },
+  {
+    "id": "beauty-004",
+    "name": "Lancome兰蔻持妆粉底液 PO-01",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=400&fit=crop"
+    ],
+    "price": 420,
+    "real_price": 380,
+    "isLowPrice": true,
+    "discount": "买1享3",
+    "sold": 15200,
+    "brand": "Lancome兰蔻",
+    "category": "粉底",
+    "tags": ["持妆", "轻薄", "遮瑕"],
+    "skinType": ["油性", "混合性"],
+    "description": "24小时持妆，轻薄透气，打造自然裸妆，油皮亲妈"
+  },
+  {
+    "id": "beauty-005",
+    "name": "MAC魅可子弹头口红 #Chili小辣椒",
+    "cover": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&h=400&fit=crop"
+    ],
+    "price": 185,
+    "real_price": 155,
+    "isLowPrice": true,
+    "discount": "2件减30",
+    "sold": 32100,
+    "brand": "MAC魅可",
+    "category": "口红",
+    "tags": ["显白", "哑光", "网红"],
+    "skinType": ["所有肤质"],
+    "description": "经典小辣椒，黄皮显白神器，秋冬必备，哑光质地高级"
+  },
+  {
+    "id": "beauty-006",
+    "name": "SK-II神仙水护肤精华露 230ml",
+    "cover": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop"
+    ],
+    "price": 1540,
+    "real_price": 1299,
+    "isLowPrice": true,
+    "discount": "满1000减200",
+    "sold": 6700,
+    "brand": "SK-II",
+    "category": "爽肤水",
+    "tags": ["提亮", "细腻", "PITERA"],
+    "skinType": ["所有肤质", "油皮"],
+    "description": "经典神仙水，PITERA精华，肌肤晶莹剔透，调理水油平衡"
+  },
+  {
+    "id": "beauty-007",
+    "name": "Perfect Diary完美日记动物眼影盘 #小鹿盘",
+    "cover": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop"
+    ],
+    "price": 129,
+    "real_price": 99,
+    "isLowPrice": true,
+    "discount": "第二件半价",
+    "sold": 45000,
+    "brand": "Perfect Diary完美日记",
+    "category": "眼影",
+    "tags": ["显色", "不飞粉", "日常"],
+    "skinType": ["所有肤质"],
+    "description": "12色眼影盘，日常百搭，新手友好，显色度高不飞粉"
+  },
+  {
+    "id": "beauty-008",
+    "name": "Chanel香奈儿山茶花洗面奶 150ml",
+    "cover": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1570194065650-d99fb4b38b15?w=400&h=400&fit=crop"
+    ],
+    "price": 460,
+    "real_price": 420,
+    "isLowPrice": false,
+    "discount": "",
+    "sold": 9800,
+    "brand": "Chanel香奈儿",
+    "category": "洁面",
+    "tags": ["温和", "清洁", "保湿"],
+    "skinType": ["所有肤质"],
+    "description": "山茶花精华，温和清洁，洗后不紧绷，泡沫细腻丰富"
+  },
+  {
+    "id": "beauty-009",
+    "name": "L'Oreal欧莱雅紫熨斗眼霜 30ml",
+    "cover": "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400&h=400&fit=crop"
+    ],
+    "price": 340,
+    "real_price": 289,
+    "isLowPrice": true,
+    "discount": "买30ml享45ml",
+    "sold": 28000,
+    "brand": "L'Oreal欧莱雅",
+    "category": "眼霜",
+    "tags": ["淡纹", "紧致", "玻色因"],
+    "skinType": ["所有肤质"],
+    "description": "玻色因成分，淡化细纹，全脸可用，性价比超高"
+  },
+  {
+    "id": "beauty-010",
+    "name": "3CE丝绒唇釉 #DAFFODIL玛莎拉红",
+    "cover": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1583875762487-5f8f7c718d14?w=400&h=400&fit=crop"
+    ],
+    "price": 110,
+    "real_price": 89,
+    "isLowPrice": true,
+    "discount": "2件8折",
+    "sold": 38000,
+    "brand": "3CE",
+    "category": "唇釉",
+    "tags": ["丝绒", "显白", "平价"],
+    "skinType": ["所有肤质"],
+    "description": "空气丝绒质地，玛莎拉红色，温柔日常，学生党首选"
+  },
+  {
+    "id": "beauty-011",
+    "name": "Kiehl's科颜氏高保湿面霜 50ml",
+    "cover": "https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop"
+    ],
+    "price": 315,
+    "real_price": 279,
+    "isLowPrice": true,
+    "discount": "满200减20",
+    "sold": 19500,
+    "brand": "Kiehl's科颜氏",
+    "category": "面霜",
+    "tags": ["保湿", "修护", "干皮救星"],
+    "skinType": ["干性", "中性", "敏感肌"],
+    "description": "冰川保护蛋白，24小时长效保湿，干皮救星，秋冬必备"
+  },
+  {
+    "id": "beauty-012",
+    "name": "NARS腮红 #Orgasm高潮",
+    "cover": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop"
+    ],
+    "price": 300,
+    "real_price": 260,
+    "isLowPrice": true,
+    "discount": "会员专享价",
+    "sold": 12000,
+    "brand": "NARS",
+    "category": "腮红",
+    "tags": ["显色", "微闪", "经典"],
+    "skinType": ["所有肤质"],
+    "description": "经典Orgasm，蜜桃金闪，自然好气色，黄皮友好"
+  },
+  {
+    "id": "beauty-013",
+    "name": "Jo Malone祖玛珑香水 #英国梨与小苍兰 30ml",
+    "cover": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop"
+    ],
+    "price": 650,
+    "real_price": 580,
+    "isLowPrice": true,
+    "discount": "赠小样套装",
+    "sold": 7500,
+    "brand": "Jo Malone祖玛珑",
+    "category": "香水",
+    "tags": ["清新", "优雅", "持久"],
+    "skinType": ["所有肤质"],
+    "description": "英国梨的甜美与小苍兰的清新，经典香氛，优雅不腻"
+  },
+  {
+    "id": "beauty-014",
+    "name": "花西子雕花口红 #M116彤心绣",
+    "cover": "https://images.unsplash.com/photo-1583875762487-5f8f7c718d14?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1583875762487-5f8f7c718d14?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&h=400&fit=crop"
+    ],
+    "price": 129,
+    "real_price": 109,
+    "isLowPrice": true,
+    "discount": "国货之光",
+    "sold": 52000,
+    "brand": "花西子",
+    "category": "口红",
+    "tags": ["雕花", "显白", "国货"],
+    "skinType": ["所有肤质"],
+    "description": "微雕工艺，烂番茄色，显白不挑皮，国货精品"
+  },
+  {
+    "id": "beauty-015",
+    "name": "La Mer海蓝之谜精华面霜 30ml",
+    "cover": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop"
+    ],
+    "price": 1650,
+    "real_price": 1450,
+    "isLowPrice": true,
+    "discount": "奢宠礼遇",
+    "sold": 4200,
+    "brand": "La Mer海蓝之谜",
+    "category": "面霜",
+    "tags": ["修护", "奢华", "神奇活性精萃"],
+    "skinType": ["所有肤质", "敏感肌"],
+    "description": "神奇活性精萃，深层修护，肌肤焕变，奢华护肤体验"
+  },
+  {
+    "id": "beauty-016",
+    "name": "Maybelline美宝莲纽约时刻眼影盘",
+    "cover": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop"
+    ],
+    "price": 98,
+    "real_price": 78,
+    "isLowPrice": true,
+    "discount": "学生价",
+    "sold": 35000,
+    "brand": "Maybelline美宝莲",
+    "category": "眼影",
+    "tags": ["平价", "日常", "易上色"],
+    "skinType": ["所有肤质"],
+    "description": "6色眼影盘，日常百搭，新手入门首选，性价比超高"
+  },
+  {
+    "id": "beauty-017",
+    "name": "Anessa安热沙小金瓶防晒霜 60ml",
+    "cover": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=400&h=400&fit=crop"
+    ],
+    "price": 298,
+    "real_price": 248,
+    "isLowPrice": true,
+    "discount": "防晒专场",
+    "sold": 45000,
+    "brand": "Anessa安热沙",
+    "category": "防晒",
+    "tags": ["SPF50+", "防水", "清爽"],
+    "skinType": ["所有肤质"],
+    "description": "SPF50+ PA++++，遇水更强，清爽不油腻，防晒界扛把子"
+  },
+  {
+    "id": "beauty-018",
+    "name": "Colorkey珂拉琪丝绒唇釉 #B605",
+    "cover": "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1583875762487-5f8f7c718d14?w=400&h=400&fit=crop"
+    ],
+    "price": 49,
+    "real_price": 39,
+    "isLowPrice": true,
+    "discount": "2件减20",
+    "sold": 68000,
+    "brand": "Colorkey珂拉琪",
+    "category": "唇釉",
+    "tags": ["平价", "显白", "丝绒"],
+    "skinType": ["所有肤质"],
+    "description": "空气丝绒质地，肉桂蜜桃色，温柔日常，学生党必入"
+  },
+  {
+    "id": "beauty-019",
+    "name": "Clinique倩碧黄油 125ml",
+    "cover": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=400&fit=crop"
+    ],
+    "price": 295,
+    "real_price": 255,
+    "isLowPrice": true,
+    "discount": "经典礼遇",
+    "sold": 22000,
+    "brand": "Clinique倩碧",
+    "category": "乳液",
+    "tags": ["保湿", "清爽", "经典"],
+    "skinType": ["油性", "混合性"],
+    "description": "天才黄油，水油平衡，清爽不油腻，经典护肤单品"
+  },
+  {
+    "id": "beauty-020",
+    "name": "Givenchy纪梵希四宫格散粉 #1",
+    "cover": "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+    "imgs": [
+      "https://images.unsplash.com/photo-1631730486784-5e8d0a5c2a1b?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=400&fit=crop"
+    ],
+    "price": 550,
+    "real_price": 480,
+    "isLowPrice": true,
+    "discount": "定妆必备",
+    "sold": 15000,
+    "brand": "Givenchy纪梵希",
+    "category": "散粉",
+    "tags": ["定妆", "控油", "四色"],
+    "skinType": ["所有肤质"],
+    "description": "四色融合，定妆控油，打造柔焦美肌，定妆界天花板"
+  }
+]

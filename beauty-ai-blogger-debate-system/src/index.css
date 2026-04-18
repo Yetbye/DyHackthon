@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  --bg-color: #E6F0FF;
+  --card-bg: #FFFFFF;
+  --accent-yellow: #FFCE00;
+  --text-main: #1D1D1F;
+  --text-secondary: #6E6E73;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --shadow: 0 10px 40px rgba(0, 30, 80, 0.04);
+  --border-radius: 32px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+}

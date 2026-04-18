@@ -1,0 +1,26 @@
+{
+  "foundation": {
+    "budget_level": ["low", "mid", "high"],
+    "scene": ["daily", "office", "date", "event", "travel"],
+    "skin_type": ["dry", "oily", "combination", "sensitive"],
+    "finish": ["matte", "natural", "glowy"],
+    "coverage": ["light", "medium", "high"],
+    "longwear_required": [true, false]
+  },
+  "lipstick": {
+    "budget_level": ["low", "mid", "high"],
+    "scene": ["daily", "office", "date", "event", "travel"],
+    "texture_preference": ["matte", "velvet", "glossy", "tint"],
+    "color_family": ["red", "nude", "pink", "brown", "coral"],
+    "longwear_required": [true, false],
+    "dry_lip": [true, false]
+  },
+  "eyeshadow": {
+    "budget_level": ["low", "mid", "high"],
+    "scene": ["daily", "office", "date", "event", "travel"],
+    "color_tone": ["earth", "pink", "orange", "cool", "neutral"],
+    "sparkle_preference": ["matte", "shimmer", "mixed"],
+    "beginner_friendly": [true, false],
+    "daily_use": [true, false]
+  }
+}

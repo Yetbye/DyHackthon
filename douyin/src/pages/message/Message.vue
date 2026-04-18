@@ -86,6 +86,29 @@
               </div>
             </div>
           </div>
+          <!--      美妆小助手 (Agent) -->
+          <div class="message" @click="nav('/agent-chat')">
+            <div class="avatar on-line">
+              <img src="../../assets/img/avatar.png" alt="" class="head-image" style="border: 2px solid #ff69b4;" />
+              <div class="agent-badge">AI</div>
+            </div>
+            <div class="content">
+              <div class="left">
+                <div class="name">
+                  <span>美妆小助手</span>
+                  <span class="tag" style="background: linear-gradient(135deg, #ff69b4, #ff1493);">AI</span>
+                </div>
+                <div class="detail">
+                  点击咨询美妆护肤问题~
+                  <div class="point"></div>
+                  刚刚
+                </div>
+              </div>
+              <div class="right">
+                <div class="not-read" style="background: linear-gradient(135deg, #ff69b4, #ff1493);"></div>
+              </div>
+            </div>
+          </div>
           <!--      抖音小助手-->
           <div class="message" @click="nav('/message/douyin-helper')">
             <div class="avatar">
@@ -886,6 +909,19 @@ async function loadRecommendData() {
             position: absolute;
             bottom: 0;
             right: 15rem;
+          }
+          
+          .agent-badge {
+            position: absolute;
+            bottom: -2rem;
+            right: 10rem;
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            font-size: 9rem;
+            padding: 2rem 6rem;
+            border-radius: 10rem;
+            font-weight: bold;
+            border: 2rem solid black;
           }
         }
 

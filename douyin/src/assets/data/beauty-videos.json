@@ -1,0 +1,292 @@
+[
+  {
+    "id": "beauty-001",
+    "video": "https://video.example.com/beauty-makeup-tutorial-1.mp4",
+    "cover": "https://images.example.com/beauty-cover-1.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-1.jpg"],
+    "title": "新手化妆教程：日常通勤妆，5分钟搞定",
+    "type": "beauty",
+    "create_time": "2024-01-15",
+    "author": {
+      "id": "user-beauty-001",
+      "nickname": "美妆达人小美",
+      "avatar": "https://images.example.com/avatar-1.jpg",
+      "certified": true
+    },
+    "music": {
+      "title": "轻快背景音乐",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 1250,
+      "digg_count": 8560,
+      "share_count": 320,
+      "collect_count": 2100
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["化妆教程", "日常妆", "新手"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-002",
+    "video": "https://video.example.com/beauty-skincare-1.mp4",
+    "cover": "https://images.example.com/beauty-cover-2.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-2.jpg"],
+    "title": "干皮护肤routine：秋冬保湿秘诀分享",
+    "type": "beauty",
+    "create_time": "2024-01-14",
+    "author": {
+      "id": "user-beauty-002",
+      "nickname": "护肤小专家",
+      "avatar": "https://images.example.com/avatar-2.jpg",
+      "certified": true
+    },
+    "music": {
+      "title": "舒缓音乐",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 890,
+      "digg_count": 6200,
+      "share_count": 180,
+      "collect_count": 1500
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["护肤", "干皮", "保湿"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-003",
+    "video": "https://video.example.com/beauty-lipstick-1.mp4",
+    "cover": "https://images.example.com/beauty-cover-3.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-3.jpg"],
+    "title": "YSL小金条试色：#21 #23 #28哪个最显白？",
+    "type": "beauty",
+    "create_time": "2024-01-13",
+    "author": {
+      "id": "user-beauty-003",
+      "nickname": "口红试色师",
+      "avatar": "https://images.example.com/avatar-3.jpg",
+      "certified": false
+    },
+    "music": {
+      "title": "时尚节拍",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 2100,
+      "digg_count": 12500,
+      "share_count": 560,
+      "collect_count": 3200
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["口红", "试色", "YSL"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-004",
+    "video": "https://video.example.com/beauty-foundation-1.mp4",
+    "cover": "https://images.example.com/beauty-cover-4.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-4.jpg"],
+    "title": "油皮亲妈粉底液测评：持妆12小时不脱妆",
+    "type": "beauty",
+    "create_time": "2024-01-12",
+    "author": {
+      "id": "user-beauty-004",
+      "nickname": "底妆测评官",
+      "avatar": "https://images.example.com/avatar-4.jpg",
+      "certified": true
+    },
+    "music": {
+      "title": "测评BGM",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 1560,
+      "digg_count": 9800,
+      "share_count": 420,
+      "collect_count": 2800
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["粉底", "油皮", "测评"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-005",
+    "video": "https://video.example.com/beauty-eyeshadow-1.mp4",
+    "cover": "https://images.example.com/beauty-cover-5.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-5.jpg"],
+    "title": "完美日记动物盘眼妆教程：小鹿盘日常画法",
+    "type": "beauty",
+    "create_time": "2024-01-11",
+    "author": {
+      "id": "user-beauty-005",
+      "nickname": "眼妆魔术师",
+      "avatar": "https://images.example.com/avatar-5.jpg",
+      "certified": false
+    },
+    "music": {
+      "title": "可爱音乐",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 780,
+      "digg_count": 5400,
+      "share_count": 150,
+      "collect_count": 1200
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["眼影", "眼妆", "完美日记"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-006",
+    "video": "https://video.example.com/beauty-skincare-2.mp4",
+    "cover": "https://images.example.com/beauty-cover-6.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-6.jpg"],
+    "title": "精华怎么选？小棕瓶 vs 小黑瓶对比测评",
+    "type": "beauty",
+    "create_time": "2024-01-10",
+    "author": {
+      "id": "user-beauty-006",
+      "nickname": "成分党护肤",
+      "avatar": "https://images.example.com/avatar-6.jpg",
+      "certified": true
+    },
+    "music": {
+      "title": "专业BGM",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 2300,
+      "digg_count": 15600,
+      "share_count": 780,
+      "collect_count": 4500
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["精华", "测评", "雅诗兰黛"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-007",
+    "video": "https://video.example.com/beauty-makeup-2.mp4",
+    "cover": "https://images.example.com/beauty-cover-7.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-7.jpg"],
+    "title": "约会妆容教程：甜美桃花妆，男神看了心动",
+    "type": "beauty",
+    "create_time": "2024-01-09",
+    "author": {
+      "id": "user-beauty-007",
+      "nickname": "约会妆专家",
+      "avatar": "https://images.example.com/avatar-7.jpg",
+      "certified": false
+    },
+    "music": {
+      "title": "浪漫音乐",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 1890,
+      "digg_count": 11200,
+      "share_count": 520,
+      "collect_count": 3100
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["约会妆", "桃花妆", "甜美"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-008",
+    "video": "https://video.example.com/beauty-skincare-3.mp4",
+    "cover": "https://images.example.com/beauty-cover-8.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-8.jpg"],
+    "title": "敏感肌修复指南：屏障受损怎么办？",
+    "type": "beauty",
+    "create_time": "2024-01-08",
+    "author": {
+      "id": "user-beauty-008",
+      "nickname": "敏感肌救星",
+      "avatar": "https://images.example.com/avatar-8.jpg",
+      "certified": true
+    },
+    "music": {
+      "title": "温柔音乐",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 3200,
+      "digg_count": 18900,
+      "share_count": 1200,
+      "collect_count": 5600
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["敏感肌", "修复", "屏障"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-009",
+    "video": "https://video.example.com/beauty-makeup-3.mp4",
+    "cover": "https://images.example.com/beauty-cover-9.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-9.jpg"],
+    "title": "欧美妆教程：截断式眼妆，气场全开",
+    "type": "beauty",
+    "create_time": "2024-01-07",
+    "author": {
+      "id": "user-beauty-009",
+      "nickname": "欧美妆女王",
+      "avatar": "https://images.example.com/avatar-9.jpg",
+      "certified": false
+    },
+    "music": {
+      "title": "霸气音乐",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 980,
+      "digg_count": 6700,
+      "share_count": 210,
+      "collect_count": 1400
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["欧美妆", "截断式", "眼妆"],
+    "comment_list": []
+  },
+  {
+    "id": "beauty-010",
+    "video": "https://video.example.com/beauty-lipstick-2.mp4",
+    "cover": "https://images.example.com/beauty-cover-10.jpg",
+    "cover_imgs": ["https://images.example.com/beauty-cover-10.jpg"],
+    "title": "MAC子弹头热门色号合集：Chili Ruby Woo试色",
+    "type": "beauty",
+    "create_time": "2024-01-06",
+    "author": {
+      "id": "user-beauty-010",
+      "nickname": "MAC控",
+      "avatar": "https://images.example.com/avatar-10.jpg",
+      "certified": false
+    },
+    "music": {
+      "title": "流行歌曲",
+      "author": "音乐库"
+    },
+    "statistics": {
+      "comment_count": 1450,
+      "digg_count": 8900,
+      "share_count": 380,
+      "collect_count": 2300
+    },
+    "isLiked": false,
+    "isCollect": false,
+    "tags": ["MAC", "口红", "试色"],
+    "comment_list": []
+  }
+]
