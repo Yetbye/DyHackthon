@@ -23,7 +23,7 @@
         background: 'black',
         marginTop: state.subTypeVisible ? state.subTypeHeight : 0
       }"
-      :api="recommendedBeautyVideo"
+      :api="recommendedVideo"
       @touchstart="pageClick"
     />
   </SlideItem>
@@ -35,7 +35,7 @@ import { onMounted, onUnmounted, reactive, ref } from 'vue'
 import bus, { EVENT_KEY } from '@/utils/bus'
 import { _checkImgUrl, _stop, _stopPropagation } from '@/utils'
 import SlideList from './SlideList.vue'
-import { recommendedBeautyVideo } from '@/api/beauty-videos'
+import { recommendedVideo } from '@/api/videos'
 import { useBaseStore } from '@/store/pinia'
 
 const store = useBaseStore()

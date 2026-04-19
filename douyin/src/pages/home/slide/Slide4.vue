@@ -4,7 +4,7 @@
       uniqueId="home"
       style="background: #000"
       :active="props.active"
-      :api="recommendedBeautyVideo"
+      :api="recommendedVideo"
     />
   </SlideItem>
 </template>
@@ -12,7 +12,7 @@
 <script setup lang="jsx">
 import SlideItem from '@/components/slide/SlideItem.vue'
 import SlideList from './SlideList.vue'
-import { recommendedBeautyVideo } from '@/api/beauty-videos'
+import { recommendedVideo } from '@/api/videos'
 
 const props = defineProps({
   active: {
